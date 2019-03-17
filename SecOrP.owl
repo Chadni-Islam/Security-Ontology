@@ -1,0 +1,1185 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://securityOrchestrationOntology.com#"
+     xml:base="http://securityOrchestrationOntology.com"
+     xmlns:securityOrchestrationOntology="http://securityOrchestrationOntology.com#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://securityOrchestrationOntology.com"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#capabilityOf -->
+
+    <owl:ObjectProperty rdf:about="http://securityOrchestrationOntology.com#capabilityOf">
+        <rdfs:domain rdf:resource="http://securityOrchestrationOntology.com#Capabilities"/>
+        <rdfs:range rdf:resource="http://securityOrchestrationOntology.com#SecurityTool"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#funcCapOf -->
+
+    <owl:ObjectProperty rdf:about="http://securityOrchestrationOntology.com#funcCapOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://securityOrchestrationOntology.com#FunctionalCapability"/>
+        <rdfs:range rdf:resource="http://securityOrchestrationOntology.com#SecurityTool"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#hasCapability -->
+
+    <owl:ObjectProperty rdf:about="http://securityOrchestrationOntology.com#hasCapability">
+        <rdfs:domain rdf:resource="http://securityOrchestrationOntology.com#SecurityTool"/>
+        <rdfs:range rdf:resource="http://securityOrchestrationOntology.com#Capabilities"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#hasFuncCap -->
+
+    <owl:ObjectProperty rdf:about="http://securityOrchestrationOntology.com#hasFuncCap">
+        <rdfs:domain rdf:resource="http://securityOrchestrationOntology.com#SecurityTool"/>
+        <rdfs:range rdf:resource="http://securityOrchestrationOntology.com#FunctionalCapability"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#hasInput -->
+
+    <owl:ObjectProperty rdf:about="http://securityOrchestrationOntology.com#hasInput">
+        <rdfs:domain rdf:resource="http://securityOrchestrationOntology.com#SecurityTool"/>
+        <rdfs:range rdf:resource="http://securityOrchestrationOntology.com#Input"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#hasInputType -->
+
+    <owl:ObjectProperty rdf:about="http://securityOrchestrationOntology.com#hasInputType">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://securityOrchestrationOntology.com#Input"/>
+        <rdfs:range rdf:resource="http://securityOrchestrationOntology.com#RunTimeEnvironment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#hasNonFunctionalCap -->
+
+    <owl:ObjectProperty rdf:about="http://securityOrchestrationOntology.com#hasNonFunctionalCap">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://securityOrchestrationOntology.com#SecurityTool"/>
+        <rdfs:range rdf:resource="http://securityOrchestrationOntology.com#NonFunctionalCapability"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#hasOperatingMode -->
+
+    <owl:ObjectProperty rdf:about="http://securityOrchestrationOntology.com#hasOperatingMode">
+        <rdfs:domain rdf:resource="http://securityOrchestrationOntology.com#InputSnort"/>
+        <rdfs:range rdf:resource="http://securityOrchestrationOntology.com#FunctionalCapability"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#hasOutput -->
+
+    <owl:ObjectProperty rdf:about="http://securityOrchestrationOntology.com#hasOutput">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://securityOrchestrationOntology.com#Snort"/>
+        <rdfs:range rdf:resource="http://securityOrchestrationOntology.com#OutputSnort"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#hasOutputType -->
+
+    <owl:ObjectProperty rdf:about="http://securityOrchestrationOntology.com#hasOutputType">
+        <rdfs:domain rdf:resource="http://securityOrchestrationOntology.com#OutputSnort"/>
+        <rdfs:range rdf:resource="http://securityOrchestrationOntology.com#Event"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#hasRuntimeEnvironment -->
+
+    <owl:ObjectProperty rdf:about="http://securityOrchestrationOntology.com#hasRuntimeEnvironment">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://securityOrchestrationOntology.com#SecurityTool"/>
+        <rdfs:range rdf:resource="http://securityOrchestrationOntology.com#RunTimeEnvironment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#nonFuncCapOf -->
+
+    <owl:ObjectProperty rdf:about="http://securityOrchestrationOntology.com#nonFuncCapOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://securityOrchestrationOntology.com#NonFunctionalCapability"/>
+        <rdfs:range rdf:resource="http://securityOrchestrationOntology.com#SecurityTool"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#requireFunctionalCab -->
+
+    <owl:ObjectProperty rdf:about="http://securityOrchestrationOntology.com#requireFunctionalCab">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://securityOrchestrationOntology.com#Activity"/>
+        <rdfs:domain rdf:resource="http://securityOrchestrationOntology.com#DetectIncident"/>
+        <rdfs:range rdf:resource="http://securityOrchestrationOntology.com#IntrusionDetection"/>
+        <rdfs:range rdf:resource="http://securityOrchestrationOntology.com#SecurityTool"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#requiresUsageOf -->
+
+    <owl:ObjectProperty rdf:about="http://securityOrchestrationOntology.com#requiresUsageOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://securityOrchestrationOntology.com#Activity"/>
+        <rdfs:range rdf:resource="http://securityOrchestrationOntology.com#SecurityTool"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#hasArgumentForDevice -->
+
+    <owl:DatatypeProperty rdf:about="http://securityOrchestrationOntology.com#hasArgumentForDevice">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#hasArgumentForFile -->
+
+    <owl:DatatypeProperty rdf:about="http://securityOrchestrationOntology.com#hasArgumentForFile">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://securityOrchestrationOntology.com#InputSnort"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#hasArgumentModeParam -->
+
+    <owl:DatatypeProperty rdf:about="http://securityOrchestrationOntology.com#hasArgumentModeParam">
+        <rdfs:domain rdf:resource="http://securityOrchestrationOntology.com#InputSnort"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#hasCommand -->
+
+    <owl:DatatypeProperty rdf:about="http://securityOrchestrationOntology.com#hasCommand">
+        <rdfs:domain rdf:resource="http://securityOrchestrationOntology.com#InputSplunk"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#hasCommandSyntax -->
+
+    <owl:DatatypeProperty rdf:about="http://securityOrchestrationOntology.com#hasCommandSyntax">
+        <rdfs:domain rdf:resource="http://securityOrchestrationOntology.com#Input"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#hasConfigFileLoc -->
+
+    <owl:DatatypeProperty rdf:about="http://securityOrchestrationOntology.com#hasConfigFileLoc">
+        <rdfs:domain rdf:resource="http://securityOrchestrationOntology.com#Input"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#hasDataInputType -->
+
+    <owl:DatatypeProperty rdf:about="http://securityOrchestrationOntology.com#hasDataInputType">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#hasDataOutputType -->
+
+    <owl:DatatypeProperty rdf:about="http://securityOrchestrationOntology.com#hasDataOutputType">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#hasDeviceInterface -->
+
+    <owl:DatatypeProperty rdf:about="http://securityOrchestrationOntology.com#hasDeviceInterface">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#hasHostType -->
+
+    <owl:DatatypeProperty rdf:about="http://securityOrchestrationOntology.com#hasHostType">
+        <rdfs:domain rdf:resource="http://securityOrchestrationOntology.com#RunTimeEnvironment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#hasIPAddress -->
+
+    <owl:DatatypeProperty rdf:about="http://securityOrchestrationOntology.com#hasIPAddress">
+        <rdfs:domain rdf:resource="http://securityOrchestrationOntology.com#RunTimeEnvironment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#hasInputData -->
+
+    <owl:DatatypeProperty rdf:about="http://securityOrchestrationOntology.com#hasInputData">
+        <rdfs:domain rdf:resource="http://securityOrchestrationOntology.com#InputSplunk"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#hasInputFileFormat -->
+
+    <owl:DatatypeProperty rdf:about="http://securityOrchestrationOntology.com#hasInputFileFormat">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://securityOrchestrationOntology.com#InputSnort"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#hasInputFileLoc -->
+
+    <owl:DatatypeProperty rdf:about="http://securityOrchestrationOntology.com#hasInputFileLoc">
+        <rdfs:domain rdf:resource="http://securityOrchestrationOntology.com#InputSnort"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#hasInputFileName -->
+
+    <owl:DatatypeProperty rdf:about="http://securityOrchestrationOntology.com#hasInputFileName">
+        <rdfs:domain rdf:resource="http://securityOrchestrationOntology.com#InputSnort"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#hasNetworkInterface -->
+
+    <owl:DatatypeProperty rdf:about="http://securityOrchestrationOntology.com#hasNetworkInterface">
+        <rdfs:domain rdf:resource="http://securityOrchestrationOntology.com#RunTimeEnvironment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#hasNumberofArgument -->
+
+    <owl:DatatypeProperty rdf:about="http://securityOrchestrationOntology.com#hasNumberofArgument">
+        <rdfs:domain rdf:resource="http://securityOrchestrationOntology.com#InputSnort"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#hasOperatingSystem -->
+
+    <owl:DatatypeProperty rdf:about="http://securityOrchestrationOntology.com#hasOperatingSystem">
+        <rdfs:domain rdf:resource="http://securityOrchestrationOntology.com#RunTimeEnvironment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#hasOutputFileFormat -->
+
+    <owl:DatatypeProperty rdf:about="http://securityOrchestrationOntology.com#hasOutputFileFormat">
+        <rdfs:domain rdf:resource="http://securityOrchestrationOntology.com#OutputSnort"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#hasOutputFileLoc -->
+
+    <owl:DatatypeProperty rdf:about="http://securityOrchestrationOntology.com#hasOutputFileLoc">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#hasOutputFileName -->
+
+    <owl:DatatypeProperty rdf:about="http://securityOrchestrationOntology.com#hasOutputFileName">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://securityOrchestrationOntology.com#OutputSnort"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#hasOutputModule -->
+
+    <owl:DatatypeProperty rdf:about="http://securityOrchestrationOntology.com#hasOutputModule">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://securityOrchestrationOntology.com#OutputSnort"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#hasOutputParamFormat -->
+
+    <owl:DatatypeProperty rdf:about="http://securityOrchestrationOntology.com#hasOutputParamFormat">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://securityOrchestrationOntology.com#OutputSnort"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#hasOutputParamSeq -->
+
+    <owl:DatatypeProperty rdf:about="http://securityOrchestrationOntology.com#hasOutputParamSeq">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://securityOrchestrationOntology.com#OutputSnort"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#hasToolType -->
+
+    <owl:DatatypeProperty rdf:about="http://securityOrchestrationOntology.com#hasToolType">
+        <rdfs:domain rdf:resource="http://securityOrchestrationOntology.com#SecurityTool"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#Activity -->
+
+    <owl:Class rdf:about="http://securityOrchestrationOntology.com#Activity">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://securityOrchestrationOntology.com#requiresUsageOf"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://securityOrchestrationOntology.com#SecurityTool"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#Alert -->
+
+    <owl:Class rdf:about="http://securityOrchestrationOntology.com#Alert">
+        <rdfs:subClassOf rdf:resource="http://securityOrchestrationOntology.com#Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#AlertGeneration -->
+
+    <owl:Class rdf:about="http://securityOrchestrationOntology.com#AlertGeneration">
+        <rdfs:subClassOf rdf:resource="http://securityOrchestrationOntology.com#FunctionalCapability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#AlertVisualization -->
+
+    <owl:Class rdf:about="http://securityOrchestrationOntology.com#AlertVisualization">
+        <rdfs:subClassOf rdf:resource="http://securityOrchestrationOntology.com#FunctionalCapability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#Antivirus -->
+
+    <owl:Class rdf:about="http://securityOrchestrationOntology.com#Antivirus">
+        <rdfs:subClassOf rdf:resource="http://securityOrchestrationOntology.com#SecurityTool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#Bro -->
+
+    <owl:Class rdf:about="http://securityOrchestrationOntology.com#Bro">
+        <rdfs:subClassOf rdf:resource="http://securityOrchestrationOntology.com#IDS"/>
+    </owl:Class>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#Capabilities -->
+
+    <owl:Class rdf:about="http://securityOrchestrationOntology.com#Capabilities"/>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#CollectAlertLog -->
+
+    <owl:Class rdf:about="http://securityOrchestrationOntology.com#CollectAlertLog">
+        <rdfs:subClassOf rdf:resource="http://securityOrchestrationOntology.com#Activity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#DetectIncident -->
+
+    <owl:Class rdf:about="http://securityOrchestrationOntology.com#DetectIncident">
+        <rdfs:subClassOf rdf:resource="http://securityOrchestrationOntology.com#Activity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#DetectionTool -->
+
+    <owl:Class rdf:about="http://securityOrchestrationOntology.com#DetectionTool">
+        <rdfs:subClassOf rdf:resource="http://securityOrchestrationOntology.com#SecurityTool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#EDR -->
+
+    <owl:Class rdf:about="http://securityOrchestrationOntology.com#EDR">
+        <rdfs:subClassOf rdf:resource="http://securityOrchestrationOntology.com#SecurityTool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#Event -->
+
+    <owl:Class rdf:about="http://securityOrchestrationOntology.com#Event"/>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#EventManagement -->
+
+    <owl:Class rdf:about="http://securityOrchestrationOntology.com#EventManagement">
+        <rdfs:subClassOf rdf:resource="http://securityOrchestrationOntology.com#FunctionalCapability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#EventMonitoring -->
+
+    <owl:Class rdf:about="http://securityOrchestrationOntology.com#EventMonitoring">
+        <rdfs:subClassOf rdf:resource="http://securityOrchestrationOntology.com#FunctionalCapability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#Firewall -->
+
+    <owl:Class rdf:about="http://securityOrchestrationOntology.com#Firewall">
+        <rdfs:subClassOf rdf:resource="http://securityOrchestrationOntology.com#SecurityTool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#FunctionalCapability -->
+
+    <owl:Class rdf:about="http://securityOrchestrationOntology.com#FunctionalCapability">
+        <rdfs:subClassOf rdf:resource="http://securityOrchestrationOntology.com#Capabilities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#GenerateIncidentReport -->
+
+    <owl:Class rdf:about="http://securityOrchestrationOntology.com#GenerateIncidentReport">
+        <rdfs:subClassOf rdf:resource="http://securityOrchestrationOntology.com#Activity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#IDS -->
+
+    <owl:Class rdf:about="http://securityOrchestrationOntology.com#IDS">
+        <rdfs:subClassOf rdf:resource="http://securityOrchestrationOntology.com#SecurityTool"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://securityOrchestrationOntology.com#hasFuncCap"/>
+                <owl:someValuesFrom rdf:resource="http://securityOrchestrationOntology.com#IntrusionDetection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#IdentifyAffectedSystem -->
+
+    <owl:Class rdf:about="http://securityOrchestrationOntology.com#IdentifyAffectedSystem">
+        <rdfs:subClassOf rdf:resource="http://securityOrchestrationOntology.com#Activity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#Incident -->
+
+    <owl:Class rdf:about="http://securityOrchestrationOntology.com#Incident">
+        <rdfs:subClassOf rdf:resource="http://securityOrchestrationOntology.com#Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#Input -->
+
+    <owl:Class rdf:about="http://securityOrchestrationOntology.com#Input">
+        <rdfs:subClassOf rdf:resource="http://securityOrchestrationOntology.com#NonFunctionalCapability"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://securityOrchestrationOntology.com#hasCommandSyntax"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#InputSnort -->
+
+    <owl:Class rdf:about="http://securityOrchestrationOntology.com#InputSnort">
+        <rdfs:subClassOf rdf:resource="http://securityOrchestrationOntology.com#Input"/>
+    </owl:Class>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#InputSplunk -->
+
+    <owl:Class rdf:about="http://securityOrchestrationOntology.com#InputSplunk">
+        <rdfs:subClassOf rdf:resource="http://securityOrchestrationOntology.com#Input"/>
+    </owl:Class>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#IntrusionDetection -->
+
+    <owl:Class rdf:about="http://securityOrchestrationOntology.com#IntrusionDetection">
+        <rdfs:subClassOf rdf:resource="http://securityOrchestrationOntology.com#FunctionalCapability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#Kaspersky -->
+
+    <owl:Class rdf:about="http://securityOrchestrationOntology.com#Kaspersky">
+        <rdfs:subClassOf rdf:resource="http://securityOrchestrationOntology.com#Antivirus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#LimaCharlie -->
+
+    <owl:Class rdf:about="http://securityOrchestrationOntology.com#LimaCharlie">
+        <rdfs:subClassOf rdf:resource="http://securityOrchestrationOntology.com#EDR"/>
+    </owl:Class>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#Log -->
+
+    <owl:Class rdf:about="http://securityOrchestrationOntology.com#Log">
+        <rdfs:subClassOf rdf:resource="http://securityOrchestrationOntology.com#Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#LogAnalysis -->
+
+    <owl:Class rdf:about="http://securityOrchestrationOntology.com#LogAnalysis">
+        <rdfs:subClassOf rdf:resource="http://securityOrchestrationOntology.com#FunctionalCapability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#LogCollection -->
+
+    <owl:Class rdf:about="http://securityOrchestrationOntology.com#LogCollection">
+        <rdfs:subClassOf rdf:resource="http://securityOrchestrationOntology.com#FunctionalCapability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#LogManagement -->
+
+    <owl:Class rdf:about="http://securityOrchestrationOntology.com#LogManagement">
+        <rdfs:subClassOf rdf:resource="http://securityOrchestrationOntology.com#FunctionalCapability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#MicrosoftEssential -->
+
+    <owl:Class rdf:about="http://securityOrchestrationOntology.com#MicrosoftEssential">
+        <rdfs:subClassOf rdf:resource="http://securityOrchestrationOntology.com#Antivirus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#NonFunctionalCapability -->
+
+    <owl:Class rdf:about="http://securityOrchestrationOntology.com#NonFunctionalCapability">
+        <rdfs:subClassOf rdf:resource="http://securityOrchestrationOntology.com#Capabilities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#Output -->
+
+    <owl:Class rdf:about="http://securityOrchestrationOntology.com#Output">
+        <rdfs:subClassOf rdf:resource="http://securityOrchestrationOntology.com#NonFunctionalCapability"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://securityOrchestrationOntology.com#hasOutputFileLoc"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#OutputSnort -->
+
+    <owl:Class rdf:about="http://securityOrchestrationOntology.com#OutputSnort">
+        <rdfs:subClassOf rdf:resource="http://securityOrchestrationOntology.com#Output"/>
+    </owl:Class>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#OutputSplunk -->
+
+    <owl:Class rdf:about="http://securityOrchestrationOntology.com#OutputSplunk">
+        <rdfs:subClassOf rdf:resource="http://securityOrchestrationOntology.com#Output"/>
+    </owl:Class>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#PacketLogging -->
+
+    <owl:Class rdf:about="http://securityOrchestrationOntology.com#PacketLogging">
+        <rdfs:subClassOf rdf:resource="http://securityOrchestrationOntology.com#FunctionalCapability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#PacketSniffer -->
+
+    <owl:Class rdf:about="http://securityOrchestrationOntology.com#PacketSniffer">
+        <rdfs:subClassOf rdf:resource="http://securityOrchestrationOntology.com#SecurityTool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#PacketSniffing -->
+
+    <owl:Class rdf:about="http://securityOrchestrationOntology.com#PacketSniffing">
+        <rdfs:subClassOf rdf:resource="http://securityOrchestrationOntology.com#FunctionalCapability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#PaloAltoFirewall -->
+
+    <owl:Class rdf:about="http://securityOrchestrationOntology.com#PaloAltoFirewall">
+        <rdfs:subClassOf rdf:resource="http://securityOrchestrationOntology.com#Firewall"/>
+    </owl:Class>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#ReportGeneration -->
+
+    <owl:Class rdf:about="http://securityOrchestrationOntology.com#ReportGeneration">
+        <rdfs:subClassOf rdf:resource="http://securityOrchestrationOntology.com#FunctionalCapability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#RunTimeEnvironment -->
+
+    <owl:Class rdf:about="http://securityOrchestrationOntology.com#RunTimeEnvironment">
+        <rdfs:subClassOf rdf:resource="http://securityOrchestrationOntology.com#NonFunctionalCapability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#SIEM -->
+
+    <owl:Class rdf:about="http://securityOrchestrationOntology.com#SIEM">
+        <rdfs:subClassOf rdf:resource="http://securityOrchestrationOntology.com#SecurityTool"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://securityOrchestrationOntology.com#hasFuncCap"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://securityOrchestrationOntology.com#FunctionalCapability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#SPlunk -->
+
+    <owl:Class rdf:about="http://securityOrchestrationOntology.com#SPlunk">
+        <rdfs:subClassOf rdf:resource="http://securityOrchestrationOntology.com#SIEM"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://securityOrchestrationOntology.com#hasFuncCap"/>
+                <owl:someValuesFrom rdf:resource="http://securityOrchestrationOntology.com#AlertVisualization"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://securityOrchestrationOntology.com#hasFuncCap"/>
+                <owl:someValuesFrom rdf:resource="http://securityOrchestrationOntology.com#EventManagement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://securityOrchestrationOntology.com#hasFuncCap"/>
+                <owl:someValuesFrom rdf:resource="http://securityOrchestrationOntology.com#EventMonitoring"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://securityOrchestrationOntology.com#hasFuncCap"/>
+                <owl:someValuesFrom rdf:resource="http://securityOrchestrationOntology.com#LogAnalysis"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://securityOrchestrationOntology.com#hasFuncCap"/>
+                <owl:someValuesFrom rdf:resource="http://securityOrchestrationOntology.com#LogCollection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://securityOrchestrationOntology.com#hasFuncCap"/>
+                <owl:someValuesFrom rdf:resource="http://securityOrchestrationOntology.com#ReportGeneration"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#SecurityTool -->
+
+    <owl:Class rdf:about="http://securityOrchestrationOntology.com#SecurityTool"/>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#Snort -->
+
+    <owl:Class rdf:about="http://securityOrchestrationOntology.com#Snort">
+        <rdfs:subClassOf rdf:resource="http://securityOrchestrationOntology.com#IDS"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://securityOrchestrationOntology.com#hasFuncCap"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://securityOrchestrationOntology.com#IntrusionDetection"/>
+                            <rdf:Description rdf:about="http://securityOrchestrationOntology.com#PacketLogging"/>
+                            <rdf:Description rdf:about="http://securityOrchestrationOntology.com#PacketSniffing"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#WireShark -->
+
+    <owl:Class rdf:about="http://securityOrchestrationOntology.com#WireShark">
+        <rdfs:subClassOf rdf:resource="http://securityOrchestrationOntology.com#PacketSniffer"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#AlertForIntrusion -->
+
+    <owl:NamedIndividual rdf:about="http://securityOrchestrationOntology.com#AlertForIntrusion">
+        <rdf:type rdf:resource="http://securityOrchestrationOntology.com#AlertGeneration"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#AnalyseSnortLog -->
+
+    <owl:NamedIndividual rdf:about="http://securityOrchestrationOntology.com#AnalyseSnortLog">
+        <rdf:type rdf:resource="http://securityOrchestrationOntology.com#LogAnalysis"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#CollectSnortAlertLog -->
+
+    <owl:NamedIndividual rdf:about="http://securityOrchestrationOntology.com#CollectSnortAlertLog">
+        <rdf:type rdf:resource="http://securityOrchestrationOntology.com#CollectAlertLog"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#DetectMaliciousTraffic -->
+
+    <owl:NamedIndividual rdf:about="http://securityOrchestrationOntology.com#DetectMaliciousTraffic">
+        <rdf:type rdf:resource="http://securityOrchestrationOntology.com#DetectIncident"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#HostLaptop -->
+
+    <owl:NamedIndividual rdf:about="http://securityOrchestrationOntology.com#HostLaptop">
+        <rdf:type rdf:resource="http://securityOrchestrationOntology.com#RunTimeEnvironment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#IdentifyAffectedIp -->
+
+    <owl:NamedIndividual rdf:about="http://securityOrchestrationOntology.com#IdentifyAffectedIp">
+        <rdf:type rdf:resource="http://securityOrchestrationOntology.com#IdentifyAffectedSystem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#IntrusionDetection -->
+
+    <owl:NamedIndividual rdf:about="http://securityOrchestrationOntology.com#IntrusionDetection">
+        <rdf:type rdf:resource="http://securityOrchestrationOntology.com#IntrusionDetection"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#MalicousTrafficDetection -->
+
+    <owl:NamedIndividual rdf:about="http://securityOrchestrationOntology.com#MalicousTrafficDetection">
+        <rdf:type rdf:resource="http://securityOrchestrationOntology.com#IntrusionDetection"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#ManageSecurityEvent -->
+
+    <owl:NamedIndividual rdf:about="http://securityOrchestrationOntology.com#ManageSecurityEvent">
+        <rdf:type rdf:resource="http://securityOrchestrationOntology.com#EventManagement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#ManageWinEvent -->
+
+    <owl:NamedIndividual rdf:about="http://securityOrchestrationOntology.com#ManageWinEvent">
+        <rdf:type rdf:resource="http://securityOrchestrationOntology.com#EventManagement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#MonitorFile -->
+
+    <owl:NamedIndividual rdf:about="http://securityOrchestrationOntology.com#MonitorFile">
+        <rdf:type rdf:resource="http://securityOrchestrationOntology.com#EventMonitoring"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#MonitorWindowLog -->
+
+    <owl:NamedIndividual rdf:about="http://securityOrchestrationOntology.com#MonitorWindowLog">
+        <rdf:type rdf:resource="http://securityOrchestrationOntology.com#EventMonitoring"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#PacketSniffing -->
+
+    <owl:NamedIndividual rdf:about="http://securityOrchestrationOntology.com#PacketSniffing">
+        <rdf:type rdf:resource="http://securityOrchestrationOntology.com#PacketSniffing"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#SnortAlert -->
+
+    <owl:NamedIndividual rdf:about="http://securityOrchestrationOntology.com#SnortAlert">
+        <rdf:type rdf:resource="http://securityOrchestrationOntology.com#Incident"/>
+        <hasOutputFileLoc>C:\Snort\log</hasOutputFileLoc>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#SnortInputForIntrusion -->
+
+    <owl:NamedIndividual rdf:about="http://securityOrchestrationOntology.com#SnortInputForIntrusion">
+        <rdf:type rdf:resource="http://securityOrchestrationOntology.com#InputSnort"/>
+        <hasOperatingMode rdf:resource="http://securityOrchestrationOntology.com#IntrusionDetection"/>
+        <hasArgumentForDevice>-i</hasArgumentForDevice>
+        <hasArgumentForFile>-r</hasArgumentForFile>
+        <hasArgumentModeParam>-C</hasArgumentModeParam>
+        <hasCommandSyntax>hasArgumentModeParam hasConfigFileLoc hasArgumentForFile hasFileLocation</hasCommandSyntax>
+        <hasConfigFileLoc>C:\Snort\etc\snort.conf</hasConfigFileLoc>
+        <hasDataInputType>file</hasDataInputType>
+        <hasDeviceInterface rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasDeviceInterface>
+        <hasInputFileLoc>C:\Users\Chadni\Documents\24dataset\UNSWdataset\</hasInputFileLoc>
+        <hasInputFileName>captuerTraffic.pcap</hasInputFileName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#SnortInputForRouter -->
+
+    <owl:NamedIndividual rdf:about="http://securityOrchestrationOntology.com#SnortInputForRouter">
+        <rdf:type rdf:resource="http://securityOrchestrationOntology.com#InputSnort"/>
+        <hasFuncCap rdf:resource="http://securityOrchestrationOntology.com#IntrusionDetection"/>
+        <hasDeviceInterface rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasDeviceInterface>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#SnortInstance -->
+
+    <owl:NamedIndividual rdf:about="http://securityOrchestrationOntology.com#SnortInstance">
+        <rdf:type rdf:resource="http://securityOrchestrationOntology.com#Snort"/>
+        <hasFuncCap rdf:resource="http://securityOrchestrationOntology.com#IntrusionDetection"/>
+        <hasInput rdf:resource="http://securityOrchestrationOntology.com#SnortInputForIntrusion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#SnortInstanceRouter -->
+
+    <owl:NamedIndividual rdf:about="http://securityOrchestrationOntology.com#SnortInstanceRouter">
+        <rdf:type rdf:resource="http://securityOrchestrationOntology.com#Snort"/>
+        <hasFuncCap rdf:resource="http://securityOrchestrationOntology.com#IntrusionDetection"/>
+        <hasArgumentForDevice></hasArgumentForDevice>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#SnortLogCollection -->
+
+    <owl:NamedIndividual rdf:about="http://securityOrchestrationOntology.com#SnortLogCollection">
+        <rdf:type rdf:resource="http://securityOrchestrationOntology.com#LogCollection"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#SnortLogManage -->
+
+    <owl:NamedIndividual rdf:about="http://securityOrchestrationOntology.com#SnortLogManage">
+        <rdf:type rdf:resource="http://securityOrchestrationOntology.com#LogManagement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#SnortOutputAlert -->
+
+    <owl:NamedIndividual rdf:about="http://securityOrchestrationOntology.com#SnortOutputAlert">
+        <rdf:type rdf:resource="http://securityOrchestrationOntology.com#OutputSnort"/>
+        <hasOutputType rdf:resource="http://securityOrchestrationOntology.com#SnortAlert"/>
+        <hasOutputFileLoc>C:\Snort\log</hasOutputFileLoc>
+        <hasOutputFileName>alert.csv</hasOutputFileName>
+        <hasOutputModule>CSV</hasOutputModule>
+        <hasOutputParamFormat>default</hasOutputParamFormat>
+        <hasOutputParamSeq>timestamp, sigGenerator, sigId, SigRev, Msg, proto, src, srcPort, dst,dstPort, ethSrc, ethDst, ethLen, tcpFlag, tcpseq</hasOutputParamSeq>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#SnortTcpdumpLog -->
+
+    <owl:NamedIndividual rdf:about="http://securityOrchestrationOntology.com#SnortTcpdumpLog">
+        <rdf:type rdf:resource="http://securityOrchestrationOntology.com#OutputSnort"/>
+        <hasOutputType rdf:resource="http://securityOrchestrationOntology.com#SnortTrafficLog"/>
+        <hasOutputFileFormat></hasOutputFileFormat>
+        <hasOutputFileLoc></hasOutputFileLoc>
+        <hasOutputFileName></hasOutputFileName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#SnortTrafficLog -->
+
+    <owl:NamedIndividual rdf:about="http://securityOrchestrationOntology.com#SnortTrafficLog">
+        <rdf:type rdf:resource="http://securityOrchestrationOntology.com#Log"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#SplunkInputMonitorFile -->
+
+    <owl:NamedIndividual rdf:about="http://securityOrchestrationOntology.com#SplunkInputMonitorFile">
+        <rdf:type rdf:resource="http://securityOrchestrationOntology.com#InputSplunk"/>
+        <hasCommand>add monitor</hasCommand>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#SplunkInputMonitorWinUpdate -->
+
+    <owl:NamedIndividual rdf:about="http://securityOrchestrationOntology.com#SplunkInputMonitorWinUpdate">
+        <rdf:type rdf:resource="http://securityOrchestrationOntology.com#InputSplunk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#SplunkInstance -->
+
+    <owl:NamedIndividual rdf:about="http://securityOrchestrationOntology.com#SplunkInstance">
+        <rdf:type rdf:resource="http://securityOrchestrationOntology.com#SPlunk"/>
+        <hasInput rdf:resource="http://securityOrchestrationOntology.com#SplunkInputMonitorFile"/>
+        <hasInput rdf:resource="http://securityOrchestrationOntology.com#SplunkInputMonitorWinUpdate"/>
+        <hasDataInputType>monitor</hasDataInputType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#SplunkOutputLog -->
+
+    <owl:NamedIndividual rdf:about="http://securityOrchestrationOntology.com#SplunkOutputLog">
+        <rdf:type rdf:resource="http://securityOrchestrationOntology.com#OutputSplunk"/>
+        <hasDataOutputType>monitor</hasDataOutputType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://securityOrchestrationOntology.com#SystemLogManage -->
+
+    <owl:NamedIndividual rdf:about="http://securityOrchestrationOntology.com#SystemLogManage">
+        <rdf:type rdf:resource="http://securityOrchestrationOntology.com#LogManagement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://securityOrchestrationOntology.com#Activity"/>
+            <rdf:Description rdf:about="http://securityOrchestrationOntology.com#Capabilities"/>
+            <rdf:Description rdf:about="http://securityOrchestrationOntology.com#Event"/>
+            <rdf:Description rdf:about="http://securityOrchestrationOntology.com#SecurityTool"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://securityOrchestrationOntology.com#AlertGeneration"/>
+            <rdf:Description rdf:about="http://securityOrchestrationOntology.com#AlertVisualization"/>
+            <rdf:Description rdf:about="http://securityOrchestrationOntology.com#EventManagement"/>
+            <rdf:Description rdf:about="http://securityOrchestrationOntology.com#EventMonitoring"/>
+            <rdf:Description rdf:about="http://securityOrchestrationOntology.com#IntrusionDetection"/>
+            <rdf:Description rdf:about="http://securityOrchestrationOntology.com#LogAnalysis"/>
+            <rdf:Description rdf:about="http://securityOrchestrationOntology.com#LogCollection"/>
+            <rdf:Description rdf:about="http://securityOrchestrationOntology.com#LogManagement"/>
+            <rdf:Description rdf:about="http://securityOrchestrationOntology.com#PacketLogging"/>
+            <rdf:Description rdf:about="http://securityOrchestrationOntology.com#PacketSniffing"/>
+            <rdf:Description rdf:about="http://securityOrchestrationOntology.com#ReportGeneration"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://securityOrchestrationOntology.com#Antivirus"/>
+            <rdf:Description rdf:about="http://securityOrchestrationOntology.com#EDR"/>
+            <rdf:Description rdf:about="http://securityOrchestrationOntology.com#Firewall"/>
+            <rdf:Description rdf:about="http://securityOrchestrationOntology.com#IDS"/>
+            <rdf:Description rdf:about="http://securityOrchestrationOntology.com#SIEM"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://securityOrchestrationOntology.com#CollectAlertLog"/>
+            <rdf:Description rdf:about="http://securityOrchestrationOntology.com#DetectIncident"/>
+            <rdf:Description rdf:about="http://securityOrchestrationOntology.com#GenerateIncidentReport"/>
+            <rdf:Description rdf:about="http://securityOrchestrationOntology.com#IdentifyAffectedSystem"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://securityOrchestrationOntology.com#Input"/>
+            <rdf:Description rdf:about="http://securityOrchestrationOntology.com#Output"/>
+            <rdf:Description rdf:about="http://securityOrchestrationOntology.com#RunTimeEnvironment"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
+
